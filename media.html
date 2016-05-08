@@ -29,13 +29,28 @@
         a {
             color: #444
         }
-        .mediaenabler, .mediaenabler a {
-            color: #ff462f
+        img, video {
+            width: 100%
+        }
+        .youtube {
+            position: relative;
+            padding-bottom: 56.25%
+        }
+        .youtube iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none
+        }
+        .gallery img {
+            display: inline;
+            width: 49%
         }
     </style>
 </head>
 <body>
-    <div class="mediaenabler" style="text-align: center">[<a href="media.html">Enable images and videos on the whole page</a>]</div>
     <header>
         <h1>Lorenzo Bracco</h1>
         <aside>I am a computer engineer.</aside>
@@ -50,17 +65,17 @@
         <h3>Bachelor's degree</h3>
         <h4>Computer Engineering (<a href="http://www.polito.it/index.php?lang=en">Politecnico di Torino</a>)</h4>
         <p>From the basics (math, physics and chemistry) to electronics (analog and digital), signals, computer architectures, computer programming, networks, databases, operating systems, etc.</p>
-        [<a href="poli1.jpg">Image: Politecnico di Torino entrance</a>]
+        <img src="poli1.jpg" alt="Politecnico di Torino entrance" />
 
         <h3>Master's degree</h3>
         <h4>Computer Engineering (<a href="http://www.polito.it/index.php?lang=en">Politecnico di Torino</a>)</h4>
         <p>More in-depth study of topics from the Bachelor's degree, discovery of new ones, like multimedia and graphics, and improvement of practical skills thanks to the work on team projects.</p>
-        [<a href="poli2.jpg">Image: Politecnico di Torino photo</a>]
+        <img src="poli2.jpg" alt="Politecnico di Torino photo" />
 
         <h3>Double Degree</h3>
         <h4>Master of Engineering (<a href="http://www.eurecom.fr/en">Eurecom</a>/<a href="http://www.telecom-paristech.fr/nc/eng">Télécom ParisTech</a>)</h4>
         <p>18 months at Eurecom, an international engineering graduate school in the south of France, within a double degree program between Politecnico di Torino and Télécom ParisTech.</p>
-        [<a href="eurecom.jpg">Image: At Eurecom</a>]
+        <img src="eurecom.jpg" alt="At Eurecom" />
     </article>
 
     <article>
@@ -69,7 +84,7 @@
         <h3><a href="http://www.reply.eu/en">Concept Reply R&D</a></h3>
         <h4>Research and development for the IoT (May 2015 - Present)</h4>
         <p>Working on the security system and other main components of the VITAL European project (<a href="http://vital-iot.eu">vital-iot.eu</a>), developing a solution to integrate heterogeneous IoT systems.</p>
-        [<a href="iot.jpg">Image: IoT - Internet of Things</a>]
+        <img src="iot.jpg" alt="IoT - Internet of Things" />
 
         <h3><a href="http://www.telecom-paristech.fr/nc/eng">Télécom ParisTech</a></h3>
         <h4>GPAC Internship (July 2014 - January 2015)</h4>
@@ -78,12 +93,12 @@
         <h3><a href="http://www.polito.it/index.php?lang=en">Politecnico di Torino</a></h3>
         <h4>Part-time assistance to teaching (March - July 2013)</h4>
         <p>Assistance to the students of Computer Science and Database courses illustrating the theoretical constructs and helping them to find the problems in their code. Assistance during the exams was also provided.</p>
-        [<a href="poli3.jpg">Image: Politecnico di Torino auditorium</a>]
+        <img src="poli3.jpg" alt="Politecnico di Torino auditorium" />
 
         <h3><a href="http://www.envisens.com/?lang=en">Envisens Technologies</a></h3>
         <h4>Internship (March - June 2012)</h4>
         <p>A software to monitor the stability of a weather radar (able to perform precise and accurate rainfall measuring) was developed on a Linux platform in C.</p>
-        [<a href="radar.jpg">Image: Weather radar</a>]
+        <img src="radar.jpg" alt="Weather radar" />
 
         <h3><a href="http://www.polincontri.polito.it">Polincontri</a></h3>
         <h4>Part-time job (October 2011 - February 2012)</h4>
@@ -93,41 +108,46 @@
     <article>
         <h2>Projects</h2>
 
-        <h3><a href="http://drone4u.eurecom.fr">Drone4u</a></h3>
+        <h3 id="drone"><a href="http://drone4u.eurecom.fr">Drone4u</a></h3>
         <h4><a href="http://www.eurecom.fr/en">Eurecom</a>/<a href="http://www.telecom-paristech.fr/nc/eng">Télécom ParisTech</a> (March - June 2014)</h4>
         <p>Development of autonomous navigation functions for the Parrot’s AR.Drone 2.0, focusing on tracking and following people.</p>
-        [<a href="drone.jpg">Image: Drone</a>]
+        <img src="drone.jpg" alt="Drone" />
         <p>The first part of the project consisted in the design of a fast and reliable color-based algorithm to track people's t-shirts. Then a piece of software was developed in C/C++ (for Linux), able to process in real-time the images coming from the drone's camera, apply the algorithm to track the person and send back commands based on a well-specified strategy.</p>
-        <p>For more details and an overview of the results please watch the video here below <span class="mediaenabler">[<a href="media.html#drone">enable media on this page</a>]</span>.</p>
-        [<a href="http://www.youtube.com/embed/JNEZmV8yONQ">Video: People tracking with autonomous UAVs based on AR.Drone 2.0</a>]
+        <p>For more details and an overview of the results please watch the video here below.</p>
+        <div class="youtube">
+            <iframe src="http://www.youtube.com/embed/JNEZmV8yONQ" allowfullscreen></iframe>
+        </div>
 
-        <h3>A dream... (?)</h3>
+        <h3 id="adream">A dream... (?)</h3>
         <h4><a href="http://www.eurecom.fr/en">Eurecom</a> (November 2013 - February 2014)</h4>
         <p>A game developed for the SoftDev (Software development methodologies) course at Eurecom.</p>
-        [<a href="dream.jpg">Image: Screenshot</a>]
+        <img src="dream.jpg" alt="Screenshot" />
         <p>It is written mainly in Python and XML and it uses the <a href="http://www.fifengine.net">FIFE game engine</a>; I have developed it on a Linux platform starting from the "Rio de Hola" demo bundled with the game engine and adding more and more features to make it a full game.</p>
-        <p>Please enjoy the video gameplay here below <span class="mediaenabler">[<a href="media.html#adream">enable media on this page</a>]</span>.</p>
-        [Video: Gameplay video <a href="dream/dream.mp4">MP4</a> <a href="dream/dream.webm">WebM</a>]
+        <p>Please enjoy the video gameplay here below.</p>
+        <video poster="dream/dream.jpg" controls>
+            <source src="dream/dream.webm" type='video/webm; codecs="vp8, vorbis"'/>
+            <source src="dream/dream.mp4" type='video/mp4'/>
+        </video> 
 
         <h3>CrowdSensing</h3>
         <h4><a href="http://www.polito.it/index.php?lang=en">Politecnico di Torino</a> (April - September 2013)</h4>
         <p>Development of an autonomous system to collect, process and send to a server environmental data (temperature, humidity and dust).</p>
-        [<a href="rasp.jpg">Image: Raspberry Pi and Microchip PIC</a>]
+        <img src="rasp.jpg" alt="Raspberry Pi and Microchip PIC" />
         <p>A Microchip PIC and a Raspberry Pi (Linux) were used. The former was tin soldered to a board and connected to the sensors and to a USB connector, while the Raspberry Pi was programmed to receive the data through the PIC and a USB cable, process it and send it to an external central server.</p>
 
-        <h3>Above Clouds</h3>
+        <h3 id="aboveclouds">Above Clouds</h3>
         <h4><a href="http://www.polito.it/index.php?lang=en">Politecnico di Torino</a> (May - July 2013)</h4>
         <p>A game developed for the Computer Graphics course at Politecnico di Torino.</p>
         <p>It is written in C/C++ and it uses the OpenGL graphic libraries; I have developed it on a Windows platform from scratch using the modeling software Blender to create the 3D environment. It is a first person platform game.</p>
-        <p>A few screenshots are available here below <span class="mediaenabler">[<a href="media.html#aboveclouds">enable media on this page</a>]</span>.</p>
+        <p>A few screenshots are available here below.</p>
         <div class="gallery">
-            [<a href="clouds/01_title.jpg">Image: Screenshot 1 - title</a>]
-            [<a href="clouds/02_story.jpg">Image: Screenshot 2 - goal</a>]
-            [<a href="clouds/03_instr.jpg">Image: Screenshot 3 - instructions</a>]
-            [<a href="clouds/04_on_obstacle.jpg">Image: Screenshot 4 - obstacle</a>]
-            [<a href="clouds/05_jumping_down.jpg">Image: Screenshot 5 - jumping</a>]
-            [<a href="clouds/06_game_over.jpg">Image: Screenshot 6 - game over</a>]
-            [<a href="clouds/07_end.jpg">Image: Screenshot 7 - game finished</a>]
+            <a href="clouds/01_title.jpg"><img src="clouds/01_title_lr.jpg" alt="title"></a>
+            <a href="clouds/02_story.jpg"><img src="clouds/02_story_lr.jpg" alt="goal"></a>
+            <a href="clouds/03_instr.jpg"><img src="clouds/03_instr_lr.jpg" alt="instructions"></a>
+            <a href="clouds/04_on_obstacle.jpg"><img src="clouds/04_on_obstacle_lr.jpg" alt="obstacle"></a>
+            <a href="clouds/05_jumping_down.jpg"><img src="clouds/05_jumping_down_lr.jpg" alt="jumping"></a>
+            <a href="clouds/06_game_over.jpg"><img src="clouds/06_game_over_lr.jpg" alt="game over"></a>
+            <a href="clouds/07_end.jpg"><img src="clouds/07_end_lr.jpg" alt="game finished"></a>
         </div>
     </article>
 
