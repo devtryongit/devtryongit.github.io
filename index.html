@@ -9,42 +9,44 @@
 
     <style type="text/css">
         body {
-            margin: 40px auto;
             max-width: 650px;
+            margin: 40px auto;
+            background-color: #eeeeee;
             line-height: 1.6;
-            font-size: 17px;
+            font-size: 18px;
             color: #444;
-            background-color: #EEEEEE;
             padding: 0 10px
         }
         h1, h2, h3 {
             line-height: 1.2
         }
         h2 {
-            margin-top: 50px
+            margin-top: 40px
         }
         h3 {
-            margin-top: 40px
+            margin-top: 32px
         }
         a {
             color: #444
         }
         img, video {
-            width: 100%;
+            width: 100%
         }
-        iframe {
+        .youtube {
+            position: relative;
+            padding-bottom: 56.25%
+        }
+        .youtube iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            border: none
         }
-        #gallery img {
+        .gallery img {
             display: inline;
             width: 49%
-        }
-        article {
-            margin: auto
         }
     </style>
 </head>
@@ -112,8 +114,8 @@
         <img src="drone.jpg" alt="Drone" />
         <p>The first part of the project consisted in the design of a fast and reliable color-based algorithm to track people's t-shirts. Then a piece of software was developed in C/C++ (for Linux), able to process in real-time the images coming from the drone's camera, apply the algorithm to track the person and send back commands based on a well-specified strategy.</p>
         <p>For more details and an overview of the results please watch the video here below.</p>
-        <div style="position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0; width: 100%;">
-            <iframe width="560" height="315" src="http://www.youtube.com/embed/JNEZmV8yONQ" allowfullscreen style="border: none"></iframe>
+        <div class="youtube">
+            <iframe src="http://www.youtube.com/embed/JNEZmV8yONQ" allowfullscreen></iframe>
         </div>
 
         <h3>A dream... (?)</h3>
@@ -138,7 +140,7 @@
         <p>A game developed for the "Computer Graphics" course at Politecnico di Torino.</p>
         <p> It is written in C/C++ and it uses the OpenGL graphic libraries; I have developed it on a Windows platform from scratch using the modeling software Blender to create the 3D environment. It is a first person platform game.</p>
         <p>A few screenshots are available here below.</p>
-        <div id="gallery">
+        <div class="gallery">
             <a href="clouds/01_title.jpg"><img src="clouds/01_title_lr.jpg" alt="title"></a>
             <a href="clouds/02_story.jpg"><img src="clouds/02_story_lr.jpg" alt="goal"></a>
             <a href="clouds/03_instr.jpg"><img src="clouds/03_instr_lr.jpg" alt="instructions"></a>
